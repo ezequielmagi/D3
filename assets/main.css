@@ -1,0 +1,113 @@
+/* ## Colors
+
+### Primary
+
+Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%)
+
+### Neutral
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%) 
+
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif;
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+
+  /*  */
+
+  /* paragraphs */
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* (background, headings, buttons) */
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+body {
+  padding: 8vh 5vw;
+  background-color: var(--Very-light-gray);
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+  .main-container {
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .sedan-container,
+  .suv-container,
+  .luxury-container {
+    height: 65vh;
+    padding: 10% 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .main-container img {
+    width: 35%;
+  }
+
+  .main-container h1 {
+    font-family: "Big Shoulders Display", cursive;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--Very-light-gray);
+  }
+  .main-container p {
+    font-size: 15px;
+    font-weight: 400;
+    font-family: "Lexend Deca", sans-serif;
+    color: var(--Transparent-white);
+    line-height: 1.5rem;
+  }
+  .main-container button {
+    color: var(--Very-light-gray);
+
+    height: 3.5rem;
+    border: none;
+    border-radius: 50px;
+    width: 60%;
+  }
+  .sedan-container {
+    background-color: var(--Bright-orange);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .sedan-container button {
+    color: var(--Bright-orange);
+  }
+  .suv-container {
+    background-color: var(--Dark-cyan);
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  .suv-container button {
+    color: var(--Dark-cyan);
+  }
+
+  .luxury-container {
+    background-color: var(--Very-dark-cyan);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .luxury-container button {
+    color: var(--Very-dark-cyan);
+  }
+}
